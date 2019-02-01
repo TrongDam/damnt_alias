@@ -20,20 +20,6 @@ alias mycode="cd /var/www"
 
 alias code="cd /var/www"
 
-alias wap="cd /var/www/wap"
-
-alias mibc="cd /var/www/mibc"
-
-alias mkd="cd /var/www/mkd"
-
-alias storestm2="cd /var/www/storest-2/"
-
-alias mediband="cd /var/www/mediband"
-
-alias ubf="cd /var/www/urbanfox"
-
-
-
 alias mydownload="cd /home/vagrant/Downloads"
 
 alias myconfig="sudo subl /etc/php5/apache2/php.ini"

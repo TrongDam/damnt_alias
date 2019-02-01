@@ -1,0 +1,178 @@
+
+## for local only
+## my custom
+
+alias mya="cat ~/.bashrc"
+
+alias chownall="sudo chown -R vagrant:www-data * && sudo chown -R vagrant:www-data ."
+
+alias myall="sudo chown -R vagrant:www-data * && sudo chown -R vagrant:www-data ."
+
+alias myui="startxfce4"
+
+alias myide="/home/vagrant/PhpStorm-162.1121.38/bin/phpstorm.sh"
+
+alias restarta="sudo service apache2 restart"
+
+
+
+alias mycode="cd /var/www"
+
+alias code="cd /var/www"
+
+alias wap="cd /var/www/wap"
+
+alias mibc="cd /var/www/mibc"
+
+alias mkd="cd /var/www/mkd"
+
+alias storestm2="cd /var/www/storest-2/"
+
+alias mediband="cd /var/www/mediband"
+
+alias ubf="cd /var/www/urbanfox"
+
+
+
+alias mydownload="cd /home/vagrant/Downloads"
+
+alias myconfig="sudo subl /etc/php5/apache2/php.ini"
+
+alias edita="sudo subl ~/.bashrc"
+
+alias gitsoreset="git reset --soft HEAD~1"
+
+alias githareset="git reset --hard HEAD~1"
+
+alias checkperm="sudo -u www-data  find . ! -writable"
+
+alias checklog="sudo subl /var/log/apache2/"
+
+alias startre="sudo service redis_6379 start"
+
+alias stopre="sudo service redis_6379 stop"
+
+alias rs="sudo service apache2 restart"
+
+alias checkdisk="dh -f"
+
+alias edebug="sudo phpenmod xdebug && restarta"
+
+alias ddebug="sudo phpdismod xdebug && restarta"
+
+
+alias t0="guake -s 0"
+
+alias t1="guake -s 1"
+
+alias t2="guake -s 2"
+
+alias t3="guake -s 3"
+
+alias t4="guake -s 4"
+
+alias t5="guake -s 5"
+
+alias gnew="guake -n new_tab"
+
+
+
+## GIT Alias
+
+alias gitstash="git stash"
+alias gs="git status"
+alias gb="git branch"
+alias gitstashpop="git stash pop"
+
+
+
+alias abtest="ab -n 32 -c 8"
+
+## Magento 1
+
+alias mcache="sudo rm -rf var/cache"
+
+alias mlog="sudo rm -rf var/log"
+
+alias mreport="sudo rm -rf var/report"
+
+
+
+## Magento 2
+
+alias m2="bin/magento"
+
+alias m2rmgen="find generated -maxdepth 1 -mindepth 1 -type d -not -name 'Magento' -not -name 'Composer' -not -name 'Symfony' -exec rm -rf {} \;"
+
+alias m2en="m2 module:enable"
+
+alias m2s="m2 module:status"
+
+alias m2f="myall && m2 cache:flush"
+
+alias m2up="m2en --all && m2 setup:upgrade && m2rmgen && m2f"
+
+alias m2static="rm -rf var/view_preprocessed/* && rm -rf pub/static/frontend/* && rm -rf pub/static/_requirejs/frontend/*"
+
+alias m2perm="sudo find . -type d -exec chmod 775 {} \; && sudo find . -type f -exec chmod 664 {} \; && sudo chmod u+x bin/magento"
+
+alias m2test="m2 dev:tests:run static"
+
+alias m2di="m2 setup:di:compile"
+
+alias m2toolbar="m2 module:disable Mgt_DeveloperToolbar"
+
+alias m2u="m2 setup:upgrade && m2f"
+
+alias m2module="m2 module:status"
+
+alias m2moduledis="m2 module:disable"
+
+alias m2moduleen="m2 module:enable"
+
+
+
+alias getn98="curl -O https://files.magerun.net/n98-magerun2.phar"
+
+alias n98="php n98-magerun2.phar "
+
+alias runcron="n98 sys:cron:run"
+
+alias getpes="curl -LO http://pestle.pulsestorm.net/pestle.phar"
+
+alias pes="php pestle.phar "
+
+
+
+alias m2mode="m2 deploy:mode:show"
+
+alias m2devmode="m2 deploy:mode:set developer"
+
+alias m2ds="m2 setup:static-content:deploy"
+
+alias m2upall="myall && m2up && myall"
+
+alias m2ca="m2 cache:enable && m2 cache:disable block_html full_page"
+
+alias m2caall="m2 cache:enable"
+
+alias m2cadisall="m2 cache:disable"
+
+alias m2index="m2 indexer:reindex"
+
+alias m2admin="m2 admin:user:create --admin-firstname ro --admin-lastname jo --admin-email rojo261287@gmail.com --admin-user rojo --admin-password admin123***"
+
+alias m2init="m2rmgen && m2perm && m2 damnt:init && m2admin && m2up && m2 damnt:user && m2index && m2ca"
+
+# Automatically added by the Magento Cloud CLI installer
+export PATH='/home/vagrant/.magento-cloud/bin':"$PATH"
+[ "$BASH" ] || [ "$ZSH" ] && . '/home/vagrant/.magento-cloud/shell-config.rc' 2>/dev/null || true
+
+# project
+sshubf="ssh oscurbanfoxvn@urbanfoxvn.de.smartosc.com"
+
+#elasticsearch
+alias eindex="curl -XGET localhost:9200/_cat/indices/"
+alias eping="curl -XGET 'localhost:9200'"
+alias estatus="curl -XGET 'localhost:9200/_cat/health?v&pretty'"
+alias estart="cd /var/tmp/elasticsearch-2.4.4/bin && ./elasticsearch"

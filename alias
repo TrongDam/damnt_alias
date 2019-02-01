@@ -169,7 +169,6 @@ export PATH='/home/vagrant/.magento-cloud/bin':"$PATH"
 [ "$BASH" ] || [ "$ZSH" ] && . '/home/vagrant/.magento-cloud/shell-config.rc' 2>/dev/null || true
 
 # project
-sshubf="ssh oscurbanfoxvn@urbanfoxvn.de.smartosc.com"
 
 #elasticsearch
 alias eindex="curl -XGET localhost:9200/_cat/indices/"
